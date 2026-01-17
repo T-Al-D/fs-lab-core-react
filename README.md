@@ -1,6 +1,7 @@
 # fs-lab-core-react
 
 Core React frontend of the fs-lab fullstack architecture.
+Webpage: https://fs-lab-core-react.onrender.com/
 
 ## Purpose
 
