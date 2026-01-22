@@ -1,0 +1,76 @@
+/* =========================
+   Global Reset & Variables
+   ========================= */
+:root {
+  /* Farben */
+  --bg-main: #242424;
+  --bg-surface: #2e2e2e;
+  --text-main: #f5f5f5;
+  --text-muted: #b5b5b5;
+  --accent: #4ea1ff;
+
+  /* Typografie */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Rendering */
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   Global Elements
+   ========================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =========================
+   Typography
+   ========================= */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--text-muted);
+  max-width: 70ch;
+}
+
+/* =========================
+   Links
+   ========================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Layout Helpers
+   ========================= */
+main {
+  padding: 1rem;
+}
