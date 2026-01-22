@@ -8,7 +8,7 @@ export function SmallExperiments() {
       <nav>
         <ul>
           <li>
-            <NavLink to="health">API Health Check</NavLink>
+            <NavLink to="health">Render API Health Check</NavLink>
           </li>
         </ul>
       </nav>

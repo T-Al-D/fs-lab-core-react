@@ -8,5 +8,5 @@ export function APIHealthCheck() {
     getHealth().then((res) => setStatus(res.status));
   }, []);
 
-  return <p>Backend status: {status}</p>;
+  return <p>Render Backend status: {status}</p>;
 }

@@ -10,7 +10,9 @@ export function AppRouter() {
     <Routes>
       <Route path="/" element={<Home />} />
 
+      {/* subrouting with 'index' */}
       <Route path="/small-experiments" element={<SmallExperiments />}>
+        <Route index element={<APIHealthCheck />} />
         <Route path="health" element={<APIHealthCheck />} />
       </Route>
 
