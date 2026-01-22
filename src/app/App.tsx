@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { AppRouter } from "./router";
+import { AppRouter } from "./Router";
 import { Layout } from "./Layout";
 
 export function App() {
