@@ -7,5 +7,11 @@ export async function getHealth() {
     throw new Error(`Health check failed: ${res.status}`);
   }
 
+  if (!API_URL) {
+    throw new Error(
+      "VITE_API_URL is not defined (check Render Static Site ENV)",
+    );
+  }
+
   return res.json();
 }
