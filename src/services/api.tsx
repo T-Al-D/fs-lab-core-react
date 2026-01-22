@@ -4,12 +4,7 @@ export async function getHealth() {
   const res = await fetch(`${API_URL}/health`);
 
   if (!res.ok) {
-    throw new Error(`HTTP ${res.status}`);
-  }
-
-  const contentType = res.headers.get("content-type");
-  if (!contentType?.includes("application/json")) {
-    throw new Error("API did not return JSON");
+    throw new Error(`Health check failed: ${res.status}`);
   }
 
   return res.json();
