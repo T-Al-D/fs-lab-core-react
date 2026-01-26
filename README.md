@@ -46,6 +46,14 @@ This structure is intended to scale without introducing unnecessary complexity.
 
 ---
 
+## Design Decisions
+
+- Global navigation is intentionally minimal
+- Small experiments are displayed as a dashboard instead of separate routes
+- CI focuses on reproducible builds rather than complex deployment pipelines
+
+---
+
 ## Styling Approach
 
 Styling follows a lightweight design-system approach:
