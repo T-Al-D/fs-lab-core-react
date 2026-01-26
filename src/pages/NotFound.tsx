@@ -1,7 +1,9 @@
 export function NotFound() {
   return (
     <>
-      <div>NotFound</div>
+      <div>
+        <h1>Error 404: NotFound !</h1>
+      </div>
     </>
   );
 }

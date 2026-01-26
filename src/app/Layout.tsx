@@ -4,7 +4,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navigation />
-      <main>{children}</main>
+      <main className="container">{children}</main>
     </>
   );
 }
