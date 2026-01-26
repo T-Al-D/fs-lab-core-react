@@ -14,7 +14,7 @@ This project serves as a reference React + TypeScript frontend for experimenting
 
 - frontend architecture and project structure
 - client-side routing with React Router
-- API integration against a separate backend
+- API-first integration against independent backend services
 - deployment and CI workflows in a real-world setup
 
 The focus is on clarity, maintainability, and conscious architectural decisions
@@ -39,8 +39,9 @@ The codebase is organized by responsibility rather than file type:
 - `app/` – application shell, layout, and routing
 - `pages/` – top-level views and feature entry points
 - `components/` – reusable UI components
-- `services/` – API and external communication logic
+- `services/` – API access and external communication
 - `styles/` – global design tokens and component-level styles
+- `types/` – shared TypeScript contracts (API-first)
 
 This structure is intended to scale without introducing unnecessary complexity.
 
@@ -50,7 +51,23 @@ This structure is intended to scale without introducing unnecessary complexity.
 
 - Global navigation is intentionally minimal
 - Small experiments are displayed as a dashboard instead of separate routes
+- Routing is introduced only when additional context or complexity is required
 - CI focuses on reproducible builds rather than complex deployment pipelines
+
+---
+
+## API-First Approach
+
+The frontend follows an **API-first design**.
+
+All backend communication is based on a shared response contract:
+
+- consistent `success / data / error / meta` structure
+- typed API responses using TypeScript generics
+- frontend logic remains agnostic to backend implementation details
+
+This allows the frontend to communicate with different backend services
+(e.g. Node.js, Python) without requiring structural changes.
 
 ---
 
@@ -104,22 +121,12 @@ Client-side routing is supported via SPA fallback configuration.
 
 ---
 
-## Assets
+## Local Development
 
-- Custom favicon (pixel-based), self-created
+The frontend expects the backend base URL to be provided via environment variables.
 
----
+Example `.env.local`:
 
-## Runtime Notes
-
-The backend API is deployed on Render's free tier and may enter sleep mode during inactivity.
-As a result, the first API request after a period of inactivity can experience a short delay.
-
----
-
-## Status
-
-Active development.
-
-Used as a sandbox for frontend architecture, routing decisions,
-API integration patterns, and CI/CD workflows.
+```env
+VITE_API_URL=http://localhost:3000
+```
