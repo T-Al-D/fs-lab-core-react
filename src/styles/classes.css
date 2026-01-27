@@ -67,3 +67,16 @@
 .global-nav a.active {
   color: var(--accent);
 }
+
+/*
+status for card
+*/
+.status-ok {
+  color: var(--success);
+}
+.status-loading {
+  color: var(--warning);
+}
+.status-down {
+  color: var(--danger);
+}
