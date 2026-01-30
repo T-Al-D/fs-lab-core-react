@@ -26,6 +26,7 @@
   flex-direction: column;
   gap: 0.5rem;
   max-width: none;
+  /*max-width: 15rem;*/
 }
 
 .card button {

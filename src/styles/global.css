@@ -137,9 +137,11 @@ button {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  min-width: 5rem;
+  min-height: 2.15rem;
   transition:
-    background-color 150ms ease,
-    transform 80ms ease;
+    background-color 250ms ease,
+    transform 90ms ease;
 }
 
 /* =========================

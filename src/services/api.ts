@@ -53,3 +53,9 @@ export function getPythonHealth() {
     ),
   });
 }
+
+export function getGoHealth() {
+  return getHealth({
+    baseUrl: assertApiUrl(import.meta.env.VITE_GO_API_URL, "VITE_GO_API_URL"),
+  });
+}

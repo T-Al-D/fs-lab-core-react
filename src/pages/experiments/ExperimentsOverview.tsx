@@ -1,7 +1,9 @@
-//import { NodeJSHealthCheckCard } from "./cards/NodeJSHealthCheck";
-
 import { GenericHealthCheckCard } from "./cards/GenericHealthCheckCard";
-import { getNodeJSHealth, getPythonHealth } from "../../services/api";
+import {
+  getNodeJSHealth,
+  getPythonHealth,
+  getGoHealth,
+} from "../../services/api";
 
 // different API calls for each Label
 const healthExperiments = [
@@ -13,6 +15,10 @@ const healthExperiments = [
     label: "Python API Health",
     provider: getPythonHealth,
   },
+  {
+    label: "GO API Health",
+    provider: getGoHealth,
+  },
 ];
 
 export function ExperimentsOverview() {
@@ -20,11 +26,11 @@ export function ExperimentsOverview() {
     <>
       {/* multiple cards in a grid */}
       <section className="grid">
-        {healthExperiments.map((exp) => (
+        {healthExperiments.map((experiment) => (
           <GenericHealthCheckCard
-            key={exp.label}
-            label={exp.label}
-            provider={exp.provider}
+            key={experiment.label}
+            label={experiment.label}
+            provider={experiment.provider}
           />
         ))}
       </section>
