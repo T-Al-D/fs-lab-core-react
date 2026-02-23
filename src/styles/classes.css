@@ -69,9 +69,10 @@
   color: var(--accent);
 }
 
-/*
-status for card
-*/
+/* =========================
+   Status for Card
+   ========================= */
+
 .status-ok {
   color: var(--success);
 }
@@ -83,3 +84,23 @@ status for card
 .status-down {
   color: var(--danger);
 }
+
+/* =========================
+   Snapshot Table
+   ========================= 
+
+.snapshot-table th,
+.snapshot-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--bg-surface-high);
+  text-align: left;
+}
+
+.snapshot-table th {
+  background-color: var(--bg-surface);
+  font-weight: 600;
+}
+
+.snapshot-table tbody tr:hover {
+  background-color: var(--accent-hover);
+}*/

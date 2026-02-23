@@ -17,6 +17,7 @@
   /* Accent (Primary Action) */
   --accent: #5e53c2;
   --accent-hover: #442af1;
+  --accent-hover-table: #3e155b;
   --accent-active: #5a4be0;
 
   /* Status */
@@ -43,6 +44,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   Layout Helpers
+   ========================= */
+main {
+  padding: 1rem;
 }
 
 /* =========================
@@ -174,8 +182,30 @@ button:disabled {
 }
 
 /* =========================
-   Layout Helpers
+   Base Table
    ========================= */
-main {
-  padding: 1rem;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+/*th- table header, td - table data cell*/
+table th,
+table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-surface-high);
+}
+
+table th {
+  font-weight: 600;
+  background-color: var(--bg-surface-elevated);
+}
+
+/*tbody-tablebody, tr -table row*/
+table tbody tr:hover {
+  background-color: var(--accent-hover-table);
 }
