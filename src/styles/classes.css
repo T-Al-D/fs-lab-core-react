@@ -106,3 +106,12 @@
   background: var(--bg-surface);
   z-index: 1;
 }
+
+/* =========================
+   Snapshot CHARTS
+   ========================= */
+.charts {
+  margin: 0.5rem;
+  display: grid;
+  gap: 2rem;
+}
