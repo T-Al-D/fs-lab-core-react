@@ -115,3 +115,15 @@
   display: grid;
   gap: 2rem;
 }
+
+/* =========================
+   Button
+   ========================= */
+/* Back to top button */
+
+#toTopBtn {
+  margin-left: 1rem;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
